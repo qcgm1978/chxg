@@ -1,6 +1,9 @@
 微信小程序猜画小歌辅助程序
 >简单的将要画的画都改成直线  
 
+## 演示
+![avatar](./show.gif)
+
 ## 安装
 ```bash
 npm install
