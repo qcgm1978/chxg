@@ -17,5 +17,5 @@ npm start
 ```
 ## 说明 
     使用AnyProxy
-    手机需要代理
+    手机需要代理本地端口6666和安装证书
 [如何安装 AnyProxy 证书](http://anyproxy.io/cn/#%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE)
