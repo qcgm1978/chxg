@@ -1,9 +1,3 @@
-const readline = require('readline');
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
 module.exports = {
     // 模块介绍
     summary: 'my customized rule for AnyProxy',
@@ -12,11 +6,11 @@ module.exports = {
     // 发送响应前处理
     *beforeSendResponse(requestDetail, responseDetail) { /* ... */
         if (requestDetail.url === 'https://drawtogether.googleminiapps.cn/endlessGame/start') {
-            let newResponse2 = Object.assign({}, responseDetail.response);
-            let body2 = JSON.parse(newResponse2.body.toString());
-            body2.challengeWords=new Array(333).fill('line')
-            newResponse2.body = JSON.stringify(body2);
-            return{ response: newResponse2 }
+            let newResponse = Object.assign({}, responseDetail.response);
+            let body = JSON.parse(newResponse.body.toString());
+            body.challengeWords = new Array(333).fill('line')
+            newResponse.body = JSON.stringify(body);
+            return { response: newResponse }
         }
     },
     // 是否处理https请求
